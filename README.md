@@ -6,13 +6,15 @@ Exporter Options Has Been Made with Python
 
 ## Exporter Options:
 
-(1) Generate New Outfits
-(2) Generate New Backblings
-(3) Generate New Pickaxes
-(4) Generate New Gliders
-(5) Generate New Emotes
-(6) Generate New Weapons
-(7) Generate All New Assets
+- (1) Generate New Outfits
+- (2) Generate New Backblings
+- (3) Generate New Pickaxes
+- (4) Generate New Gliders
+- (5) Generate New Emotes
+- (6) Generate New Bundles
+- (7) Generate New Weapons
+- (8) Generate New Consumables
+- (9) Generate All New Assets
 
 ## Exporter Options - Upcoming Options
 
