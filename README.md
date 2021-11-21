@@ -28,6 +28,7 @@ An tool which as a option to export. Useful for content creator and leakers
 
 ## Packages
 [requests](https://pypi.org/project/requests/)
+
 [colorama](https://pypi.org/project/colorama/)
 ```pip install glob```
 ```pip install sys```
