@@ -3,7 +3,7 @@ An tool which as a option to export. Useful for content creator and leakers
 
 ## Exporter Options - Image and Info
 -- Info: Exporter-Options has been made in Python.
-![ZeroPoint](https://user-images.githubusercontent.com/71980142/135494443-27bd8f0d-1697-42e5-9f0f-4f628bb5968c.png)
+![ZeroPoint](https://cdn.discordapp.com/attachments/788713671651360822/911913153745534986/unknown.png)
 
 ## Exporter Options:
 
