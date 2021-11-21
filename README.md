@@ -15,13 +15,13 @@ Exporter Options Has Been Made with Python
 - (7) Generate New Weapons
 - (8) Generate New Consumables
 - (9) Generate All New Assets
+- (10) Delete images in the images folder
 
 ## Exporter Options - Upcoming Options
 
  - Generate Sounds (Made by Leaks station)
  - Merge Images
  - Tweet
- - Delete images in the images folder
 
 ## Exporter Options Developers
 
