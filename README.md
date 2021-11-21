@@ -24,11 +24,23 @@ An tool which as a option to export. Useful for content creator and leakers
  - Merge Images
  - Tweet
 
-## Exporter Options Developers
+## Requirements
+[Python 3.8.9](https://www.python.org/ftp/python/3.8.9/python-3.8.9-amd64.exe) or higher.
 
-* Kraypex: [Twitter](https://twitter.com/Kraypex) 
-* DJLOR3XZO: [Twitter](https://twitter.com/djlorenzouasset)
+## Packages
+```pip install requests```
+```pip install json```
+```pip install colorama```
+```pip install time```
+```pip install glob```
+```pip install sys```
+```pip install os```
 
 ## Exporter With Options - Download
 
 **You Can Download The Last Version Of Exporter Options From Here [Download](https://github.com/Kraypex/Exporter-With-Options/tree/latest)** 
+
+## Exporter Options Developers
+
+* Kraypex: [Twitter](https://twitter.com/Kraypex) 
+* DJLOR3XZO: [Twitter](https://twitter.com/djlorenzouasset)
