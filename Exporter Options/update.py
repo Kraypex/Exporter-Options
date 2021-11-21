@@ -8,6 +8,12 @@ from colorama import Fore
 
 colorama.init(autoreset=True)
 
+r = requests.get('https://benbot.app/api/v1/aes')
+rr = r.json()
+version = rr['version']
+
+print(Fore.GREEN + f"Loaded {version}...\n")
+
 def update():
     assets = requests.get('https://benbot.app/api/v1/files/added').json()
     aes = requests.get('https://benbot.app/api/v1/status').json()
