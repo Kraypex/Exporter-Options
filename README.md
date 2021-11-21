@@ -27,10 +27,8 @@ An tool which as a option to export. Useful for content creator and leakers
 [Python 3.8.9](https://www.python.org/ftp/python/3.8.9/python-3.8.9-amd64.exe) or higher.
 
 ## Packages
-```pip install requests```
-```pip install json```
-```pip install colorama```
-```pip install time```
+[requests](https://pypi.org/project/requests/)
+[colorama](https://pypi.org/project/colorama/)
 ```pip install glob```
 ```pip install sys```
 ```pip install os```
