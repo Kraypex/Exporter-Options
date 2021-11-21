@@ -14,9 +14,8 @@ An tool which as a option to export. Useful for content creator and leakers
 - (5) Generate New Emotes
 - (6) Generate New Bundles
 - (7) Generate New Weapons
-- (8) Generate New Consumables
-- (9) Generate All New Assets
-- (10) Delete images in the images folder
+- (8) Generate All New Assets
+- (9) Delete images in the images folder
 
 ## Exporter Options - Upcoming Options
 
