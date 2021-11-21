@@ -12,7 +12,9 @@ r = requests.get('https://benbot.app/api/v1/aes')
 rr = r.json()
 version = rr['version']
 
-print(Fore.GREEN + f"Loaded {version}...\n")
+print(Fore.LIGHTBLUE_EX + f"Loading {version}...")
+sleep(0.4)
+print(Fore.GREEN + f"Successfully loaded" + Fore.YELLOW + f" [{version}]\n")
 
 def update():
     assets = requests.get('https://benbot.app/api/v1/files/added').json()
