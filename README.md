@@ -16,7 +16,11 @@ An tool which as a option to export. Useful for content creator and leakers
 ## Packages
 
 - Run install.bat
-- or        
+
+
+       or
+       
+       
 - Install them manually by running the commands below
 
          pip install requests
