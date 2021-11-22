@@ -5,6 +5,19 @@ An tool which as a option to export. Useful for content creator and leakers
 - Info: Exporter-Options has been made in Python.
 ![ExporterOptions](https://cdn.discordapp.com/attachments/796740591270363157/911926364490309632/unknown.png)
 
+## Requirements
+[Python 3.8.9](https://www.python.org/ftp/python/3.8.9/python-3.8.9-amd64.exe) or higher.
+
+## Packages
+
+- Run install.bat
+
+        or
+        
+ - Install from manually
+[requests](https://pypi.org/project/requests/)
+
+[colorama](https://pypi.org/project/colorama/)
 ## Exporter Options:
 
 - (1) Generate New Outfits
@@ -22,18 +35,6 @@ An tool which as a option to export. Useful for content creator and leakers
  - Generate Sounds (Made by Leaks station)
  - Merge Images
  - Tweet
-
-## Requirements
-[Python 3.8.9](https://www.python.org/ftp/python/3.8.9/python-3.8.9-amd64.exe) or higher.
-
-## Packages
-[requests](https://pypi.org/project/requests/)
-
-[colorama](https://pypi.org/project/colorama/)
-
-```pip install glob```
-```pip install sys```
-```pip install os```
 
 ## Exporter With Options - Download
 
