@@ -2,7 +2,6 @@ import json
 import colorama
 import requests
 from time import sleep
-import sys
 
 from colorama import Fore
 
@@ -16,15 +15,8 @@ print(Fore.LIGHTBLUE_EX + f"Loading {version}...")
 sleep(0.4)
 print(Fore.GREEN + f"Successfully loaded" + Fore.YELLOW + f" [{version}]\n")
 
-def update():
-    assets = requests.get('https://benbot.app/api/v1/files/added').json()
-    aes = requests.get('https://benbot.app/api/v1/status').json()
-    with open('datas/assets.json', 'w') as file:
-        json.dump(assets, file, indent=2)
-    with open('datas/Pakchunks.json', 'w') as file:
-        json.dump(aes, file, indent=2)
-
-ask = input('Do you want to update the json files?\n(1) Yes\n(2) No\n->>> ')
+print(Fore.BLUE + 'Do you want to update the json files?\n' + Fore.GREEN + '(1) Yes\n' + Fore.RED + '(2) No' + Fore.WHITE)
+ask = (input('->>> '))
 if ask == '1':
     assets = requests.get('https://benbot.app/api/v1/files/added').json()
     aes = requests.get('https://benbot.app/api/v1/status').json()
@@ -33,6 +25,7 @@ if ask == '1':
     with open('datas/Pakchunks.json', 'w') as file:
         json.dump(aes, file, indent=2)
         print(Fore.GREEN + f'\nUpdated successfully\n')
-        sleep(1)
+        sleep(0)
 if ask == '2':
-    pass                                         
+    print(Fore.RED + f'Not updating the json files\n')
+    pass
