@@ -43,10 +43,6 @@ An tool which as a option to export. Useful for content creator and leakers
  - Merge Images
  - Tweet
 
-## Exporter With Options - Download
-
-**You Can Download The Last Version Of Exporter Options From Here [Download](https://github.com/Kraypex/Exporter-With-Options/tree/latest)** 
-
 ## Exporter Options Developers
 
 * Kraypex: [Twitter](https://twitter.com/Kraypex) 
