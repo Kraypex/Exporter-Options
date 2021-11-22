@@ -15,6 +15,8 @@ An tool which as a option to export. Useful for content creator and leakers
         or
         
  - Install from manually
+
+
 [requests](https://pypi.org/project/requests/)
 
 [colorama](https://pypi.org/project/colorama/)
