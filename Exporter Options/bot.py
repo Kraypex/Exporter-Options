@@ -122,8 +122,6 @@ if ask == '1':
     print(Fore.YELLOW + f"[{time.strftime('%H:%M')}] " + Fore.MAGENTA + "(Finished) " + Fore.WHITE + f"Data Generated in {round(end - start, 2)}")
     sleep(5)
     sys.exit()
-else:
-    print(Fore.RED + f'Invalid input...')
 if ask == '2':
     start = time.time()
     print(Fore.YELLOW + f"[{time.strftime('%H:%M')}] " + Fore.MAGENTA + "(Info) " + Fore.WHITE + "Data Generated - Inizialing...")
@@ -200,3 +198,5 @@ if ask == '9':
     for file in delete_files:
         os.remove(file)
     print(Fore.GREEN + f'\nSuccessfully deleted all images in images folder\n')
+else:
+    print(Fore.RED + f'Invalid input...')
