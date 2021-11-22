@@ -16,15 +16,13 @@ An tool which as a option to export. Useful for content creator and leakers
 ## Packages
 
 - Run install.bat
+- or        
+- Install them manually by running the commands below
 
-        or
-        
- - Install from manually
-
-
-[requests](https://pypi.org/project/requests/)
-
-[colorama](https://pypi.org/project/colorama/)
+         pip install requests
+                  
+         pip install colorama
+         
 ## Exporter Options:
 
 - (1) Generate New Outfits
