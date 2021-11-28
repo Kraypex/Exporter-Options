@@ -12,18 +12,6 @@ An tool which as a option to export. Useful for content creator and leakers
 - Extract the zip using [winrar](https://www.win-rar.com/predownload.html?&L=0)
 - Run install.bat
 - Boom! Everything is done now run run.bat enjoy exporting cosmetics in less than a second 😉    
-
-## Packages
-
-- Run install.bat
-
-**Or**
-       
-- Install them manually by running the commands below
-
-         pip install requests    
-                  
-         pip install colorama
          
 ## Exporter Options:
 
@@ -39,10 +27,11 @@ An tool which as a option to export. Useful for content creator and leakers
 
 ## Exporter Options - Upcoming Options
 
- - Merge Images
- - Tweet/Auto Tweet
+- Consumables
 
 ## Exporter Options Developers
 
 * Kraypex: [Twitter](https://twitter.com/Kraypex) 
-* DJLOR3XZO: [Twitter](https://twitter.com/djlorenzouasset)
+* Djlor3xzo: [Twitter](https://twitter.com/djlorenzouasset)
+* Fevers: [Twitter](https://twitter.com/FeversGFX)
+* Leaks Station: [Twitter](https://twitter.com/Leaks_station)
