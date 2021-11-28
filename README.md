@@ -32,6 +32,8 @@ An tool which as a option to export. Useful for content creator and leakers
 ## Exporter Options Developers
 
 * Kraypex: [Twitter](https://twitter.com/Kraypex) 
-* Djlor3xzo: [Twitter](https://twitter.com/djlorenzouasset)
+* Djlor3xzo: [Twitter](https://twitter.com/djlorenzouassest
+
+## Functions Credits
 * Fevers: [Twitter](https://twitter.com/FeversGFX)
 * Leaks Station: [Twitter](https://twitter.com/Leaks_station)
