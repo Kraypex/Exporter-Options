@@ -15,6 +15,10 @@ from colorama import Fore
 
 colorama.init(autoreset=True)
 
+os.system("cls")
+os.system(
+    "TITLE Exporter Options")
+
 r = requests.get('https://benbot.app/api/v1/status')
 rr = r.json()
 version = rr['currentFortniteVersion']
