@@ -27,8 +27,7 @@ An tool which as a option to export. Useful for content creator and leakers
 
 ## Exporter Options - Upcoming Options
 
- - Merge Images
- - Tweet/Auto Tweet
+- 
 
 ## Exporter Options Developers
 
