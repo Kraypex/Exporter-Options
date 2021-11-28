@@ -27,7 +27,7 @@ An tool which as a option to export. Useful for content creator and leakers
 
 ## Exporter Options - Upcoming Options
 
-- 
+- Consumables
 
 ## Exporter Options Developers
 
