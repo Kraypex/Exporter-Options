@@ -8,7 +8,7 @@ An tool which as a option to export. Useful for content creator and leakers
 ## Installation
 
 - Install [Python 3.8.9](https://www.python.org/ftp/python/3.8.9/python-3.8.9-amd64.exe) or higher
-- Download the [zip](https://github.com/Kraypex/Exporter-Options/archive/refs/heads/beta.zip)
+- Download the [zip](https://github.com/Kraypex/Exporter-Options/archive/refs/heads/main.zip)
 - Extract the zip using [winrar](https://www.win-rar.com/predownload.html?&L=0)
 - Run install.bat
 - Boom! Everything is done now run run.bat enjoy exporting cosmetics in less than a second 😉    
