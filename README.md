@@ -25,10 +25,6 @@ An tool which as a option to export. Useful for content creator and leakers
 - (8) Generate All New Assets
 - (9) Delete images in the images folder
 
-## Exporter Options - Upcoming Options
-
-- Consumables
-
 ## Exporter Options Developers
 
 * [Kraypex](https://twitter.com/Kraypex) 
