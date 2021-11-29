@@ -35,6 +35,5 @@ An tool which as a option to export. Useful for content creator and leakers
 * [Djlor3xzo](https://twitter.com/djlorenzouasset)
 
 ## Functions Credits
-
-* [Fevers](https://twitter.com/FeversGFX)
-* [Leaks Station](https://twitter.com/Leaks_station)
+- Merge & Compress - [Fevers](https://twitter.com/FeversGFX)
+- Black Background - [Leaks Station](https://twitter.com/Leaks_station)
