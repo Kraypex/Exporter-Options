@@ -6,6 +6,7 @@ import sys, os
 import glob
 import math
 import tweepy
+import platform
 from PIL import Image
 from time import sleep
 from math import ceil, sqrt
@@ -15,9 +16,17 @@ from colorama import Fore
 
 colorama.init(autoreset=True)
 
-os.system("cls")
-os.system(
+x = platform.system()
+if x == 'Windows':
+    import pyfiglet
+    ascii_banner = pyfiglet.figlet_format("EXPORTER OPTIONS", font = "slant")
+    print(Fore.CYAN + ascii_banner + Fore.RESET)
+    time.sleep(2)
+    print('Loading...')
+    os.system("cls")
+    os.system(
     "TITLE Exporter Options")
+    os.system('cls' if os.name=='nt' else 'clear')
 
 r = requests.get('https://benbot.app/api/v1/status')
 rr = r.json()
@@ -248,7 +257,7 @@ def tweet():
     tweet = "New Cosmetics! #Fortnite"
     post_result = api.update_status(status=tweet, media_ids=[media.media_id])
 
-print(f'What do you want to generate?\n' + Fore.CYAN + f'(1) Generate New Outfits\n(2) Generate New Backblings\n(3) Generate New Pickaxes\n(4) Generate New Gliders\n(5) Generate New Emotes and New Emojis\n(6) Generate New Bundles\n(7) Generate New Weapons\n' + Fore.LIGHTBLUE_EX + f'(8) Generate All New Assets\n' + Fore.LIGHTRED_EX + f'(9) Delete all images in images folder' + Fore.WHITE)
+print(f'What do you want to generate?\n' + Fore.CYAN + f'(1) Generate New Outfits\n(2) Generate New Backblings\n(3) Generate New Pickaxes\n(4) Generate New Gliders\n(5) Generate New Emotes and New Emojis\n(6) Generate New Bundles\n(7) Generate New Weapons\n(8) Generate New Consumables\n' + Fore.LIGHTBLUE_EX + f'(9) Generate All New Assets\n' + Fore.LIGHTRED_EX + f'(10) Delete all images in images folder' + Fore.WHITE)
 ask = (input("->>> "))
 if ask == '1':
     start = time.time()
@@ -334,8 +343,33 @@ if ask == '7':
     end = time.time()
     print(Fore.YELLOW + f"[{time.strftime('%H:%M')}] " + Fore.MAGENTA + "(Finished) " + Fore.WHITE + f"Data Generated in {round(end - start, 2)} seconds.")
     sleep(5)
-    sys.exit()                  
+    sys.exit()
 if ask == '8':
+    start = time.time()
+    consumable = input('What is the folder name which contains consumable images? Ex: FortniteGame/Content/Athena/Items/Consumables/{consumablename}/. Enter only name not path!\n->>> ')
+    with open('datas/assets.json', 'r') as Icons:
+        Icons = json.load(Icons)
+    for i in Icons:
+        if i.startswith(f'FortniteGame/Content/Athena/Items/Consumables/{consumable}/'):
+            path = i
+            print(Fore.YELLOW + f"[{time.strftime('%H:%M')}] " + Fore.MAGENTA + "(Info) " + Fore.BLUE + "Generating: " + Fore.GREEN + path)
+            image = requests.get(f'https://benbot.app/api/v1/exportAsset?path={path}')
+            pathname = (path.split(f'FortniteGame/Content/Athena/Items/Consumables/{consumable}/')[-1])
+            open(f'datas/cache/{pathname}.png', 'wb+').write(image.content)
+            getcon = Image.open(f'datas/cache/{pathname}.png').resize((1024,1024))
+            blackimg = Image.open(f'datas/blackimg.png')
+            blackimg.paste(getcon,(20,5),mask=getcon)
+            blackimg.save(f'images/{pathname}.png')
+            os.remove(f'datas/cache/{pathname}.png')
+            end = time.time()
+            print(Fore.YELLOW + f"[{time.strftime('%H:%M')}] " + Fore.MAGENTA + "(Finished) " + Fore.WHITE + f"Data Generated in {round(end - start, 2)}")
+            sleep(5)
+            sys.exit()
+        else:
+            print(Fore.RED + "Couldn't find any consumables in the json file or you maybe entered a wrong name...")
+            sleep(5)
+            sys.exit()                 
+if ask == '9':
     start = time.time()
     print(Fore.YELLOW + f"[{time.strftime('%H:%M')}] " + Fore.MAGENTA + "(Info) " + Fore.WHITE + "Data Generated - Inizialing...")
     LocalChunksLoader()
@@ -347,6 +381,23 @@ if ask == '8':
     NewEmojiAssets()
     NewBundleAssets()
     NewWeaponAssets()
+    consumable = input('What is the folder name which contains consumable images? Ex: FortniteGame/Content/Athena/Items/Consumables/{consumablename}/. Enter only name not path!\n->>> ')
+    with open('datas/assets.json', 'r') as Icons:
+        Icons = json.load(Icons)
+    for i in Icons:
+        if i.startswith(f'FortniteGame/Content/Athena/Items/Consumables/{consumable}/'):
+            path = i
+            print(Fore.YELLOW + f"[{time.strftime('%H:%M')}] " + Fore.MAGENTA + "(Info) " + Fore.BLUE + "Generating: " + Fore.GREEN + path)
+            image = requests.get(f'https://benbot.app/api/v1/exportAsset?path={path}')
+            pathname = (path.split(f'FortniteGame/Content/Athena/Items/Consumables/{consumable}/')[-1])
+            open(f'datas/cache/{pathname}.png', 'wb+').write(image.content)
+            getcon = Image.open(f'datas/cache/{pathname}.png').resize((1024,1024))
+            blackimg = Image.open(f'datas/blackimg.png')
+            blackimg.paste(getcon,(20,5),mask=getcon)
+            blackimg.save(f'images/{pathname}.png')
+            os.remove(f'datas/cache/{pathname}.png')
+    else:
+        print(Fore.RED + "Couldn't find any consumables in the json file or you maybe entered a wrong name...")
     large_merger()
     compress()
     tweet()
@@ -354,7 +405,7 @@ if ask == '8':
     print(Fore.YELLOW + f"[{time.strftime('%H:%M')}] " + Fore.MAGENTA + "(Finished) " + Fore.WHITE + f"Data Generated in {round(end - start, 2)} seconds.")
     sleep(5)
     sys.exit()
-if ask == '9':
+if ask == '10':
     delete_files = glob.glob('images/*')
     for file in delete_files:
         os.remove(file)
