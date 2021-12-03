@@ -221,10 +221,10 @@ def compress():
 
 def tweet():
     twitter_auth_keys = {
-        "consumer_key": "3Vp0hT5s2lN7hazwGwMkpIZXB", # Your API Key
-        "consumer_secret": "o4rIUUQA5t3bbnWUjMbylNIBzfYTT8Z3dCkAzIRroZOdWCWXe7", # Your API Key Secret
-        "access_token": "1409795250780971013-ahTJNKanCgalfk303zVqUTeozjtNQ6", # Your Access Token
-        "access_token_secret" : "6kkqNuTTVgFZYr0aLn1qJhbTpThiCMmthBr5afyrgB8dQ" # Your Access Token Secret
+        "consumer_key": "", # Your API Key
+        "consumer_secret": "", # Your API Key Secret
+        "access_token": "", # Your Access Token
+        "access_token_secret" : "" # Your Access Token Secret
     }
 
     auth = tweepy.OAuthHandler(
