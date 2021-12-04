@@ -128,17 +128,21 @@ def NewEmoteAssets():
     with open('datas/assets.json', 'r') as Icons:
         Icons = json.load(Icons)
     for i in Icons:
-        if i.startswith('FortniteGame/Content/UI/Foundation/Textures/BattleRoyale/FeaturedItems/Emotes/'):
-            path = i
-            print(Fore.YELLOW + f" [{time.strftime('%H:%M')}] " + Fore.MAGENTA + "(Info) " + Fore.BLUE + "Generating: " + Fore.GREEN + path)
-            image = requests.get(f'https://benbot.app/api/v1/exportAsset?path={path}')
-            pathname = (path.split('FortniteGame/Content/UI/Foundation/Textures/BattleRoyale/FeaturedItems/Emotes/')[-1])
-            open(f'datas/cache/{pathname}.png', 'wb+').write(image.content)
-            getemote = Image.open(f'datas/cache/{pathname}.png').resize((1024,1024))
-            blackimg = Image.open(f'datas/blackimg.png')
-            blackimg.paste(getemote,(20,5),mask=getemote)
-            blackimg.save(f'images/{pathname}.png')
-            os.remove(f'datas/cache/{pathname}.png')
+        if i.startswith('FortniteGame/Content/UI/Foundation/Textures/Icons/Emotes/'):
+            if i.endswith('-L.uasset'):
+                path = i
+                print(Fore.YELLOW + f" [{time.strftime('%H:%M')}] " + Fore.MAGENTA + "(Info) " + Fore.BLUE + "Generating: " + Fore.GREEN + path)
+                image = requests.get(f'https://benbot.app/api/v1/exportAsset?path={path}')
+                pathname = (path.split('FortniteGame/Content/UI/Foundation/Textures/Icons/Emotes/')[-1])
+                open(f'datas/cache/{pathname}.png', 'wb+').write(image.content)
+                getemote = Image.open(f'datas/cache/{pathname}.png').resize((1024,1024))
+                blackimg = Image.open(f'datas/blackimg.png')
+                blackimg.paste(getemote,(20,5),mask=getemote)
+                blackimg.save(f'images/{pathname}.png')
+                os.remove(f'datas/cache/{pathname}.png')
+            else:
+                path = i
+                print(Fore.YELLOW + f"[{time.strftime('%H:%M')}] " + Fore.MAGENTA + "(Info) " + Fore.RED + "Skipped " + Fore.CYAN + path)
 
 def NewEmojiAssets():
     with open('datas/assets.json', 'r') as Icons:
@@ -233,23 +237,20 @@ def compress():
     foo.save(f"merged/merged.jpg",quality=65)
 
 def tweet():
-    twitter_auth_keys = {
-        "consumer_key": "", # Your API Key
-        "consumer_secret": "", # Your API Key Secret
-        "access_token": "", # Your Access Token
-        "access_token_secret" : "" # Your Access Token Secret
-    }
-
-    auth = tweepy.OAuthHandler(
-            twitter_auth_keys['consumer_key'],
-            twitter_auth_keys['consumer_secret']
-            )
-    auth.set_access_token(
-            twitter_auth_keys['access_token'],
-            twitter_auth_keys['access_token_secret']
-            )
+    with open("twitterkeys.json", "r+") as token:
+        tokens = json.load(token)
+    consumer_key = tokens['data']['API_key']
+    consumer_secret_key = tokens['data']['API_Secret_Key']
+    access_token = tokens['data']['Access_Token']
+    access_token_secret = tokens['data']['Access_Token_Secret']
+    if consumer_key == "" or consumer_secret_key == "" or access_token == "" or access_token_secret == "" :
+        print(Fore.RED + "Please check your token's in your twitterkeys.json file! Token's are missing!")
+        time.sleep(5)
+        exit()
+    auth = tweepy.OAuthHandler(consumer_key, consumer_secret_key)
+    auth.set_access_token(access_token, access_token_secret)
     api = tweepy.API(auth)
- 
+
     # Upload image
     media = api.media_upload("merged/merged.jpg")
  
